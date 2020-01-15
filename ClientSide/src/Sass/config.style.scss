@@ -20,6 +20,7 @@ a, h1, h2, h3, h4, h5, h6, p {
 .hidden{
     visibility: hidden;
     display: none;
+    overflow: hidden;
 }
 
 // font-family: 'Josefin Sans', sans-serif;
@@ -260,14 +261,18 @@ select {
             @include flex(column);
             @include flexAlign(center,center);
             flex-wrap: wrap;
+            transition: 0.7s opacity ease-in-out;
  
             p{
                 position: relative;
                 font-size: 20px;
                 color: $whiteColor;
                 margin: 20px 0 50px 0;
+                display: block;
+                opacity: 1;
                 text-decoration: none;
                 transition: 0.5s font-size ease-in;
+                
 
                 &:hover{
                     font-size: 34px;

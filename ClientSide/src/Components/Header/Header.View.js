@@ -30,7 +30,8 @@ export default function HeaderView() {
             <div className="Nav" style={getNavState ?
                 { height: "100vh" } : { height: "0px" }}>
                 <div className="NavRow">
-                    <div className="NavLinks">
+                    <div className="NavLinks" style={getNavState ?
+                        { opacity: 1 } : { opacity: 0 }}>
                         <Link onClick={handleBobble} to="/"><p>Home</p></Link>
                         <Link onClick={handleBobble} to="/aboutus"><p>About Us</p></Link>
                         <Link onClick={handleBobble} to="/contactus"><p>Contact Us</p></Link>
