@@ -2,7 +2,10 @@
 @import '../Sass/font.style.scss';
 @import '../Sass/mixin.style.scss';
 
-
+//MEDIA QUERIES
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+$phone: "(min-width: 360px) and (max-width: 768px)";
 
 html, body{
     padding: 0px;
@@ -23,6 +26,34 @@ a, h1, h2, h3, h4, h5, h6, p {
     overflow: hidden;
 }
 
+
+
+//CONSTANTS
+
+.m-b-10{
+    margin-bottom: 10px;
+}
+
+.m-b-20{
+    margin-bottom: 20px;
+}
+
+.p-a-10{
+    padding: 10px;
+}
+
+.p-a-20{
+    padding: 20px;
+}
+
+.p-t-10{
+    padding-top:10px;
+}
+
+.p-t-20{
+    padding-top:20px;
+}
+
 // font-family: 'Josefin Sans', sans-serif;
 
 select::-ms-expand {
@@ -36,6 +67,98 @@ select {
     text-overflow: '';
 }
 
+.row{
+    position: relative;
+    width: 100%;
+    height: auto;
+    @include flex(row);
+    @include flexAlign(center,flex-start);
+}
+
+.column{
+    position: relative;
+    width: 40%;
+    height: auto;
+    @include flex(column);
+    @include flexAlign(center,center);
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: auto;
+    @include flex(column);
+    @include flexAlign(center,center);
+}
+
+.card{
+    position: relative;
+    width: 10%;
+    height: 120px;
+    background: $whiteColor;
+    margin: 0 2% 3% 0;
+    @include flex(column);
+    @include flexAlign(center,center);
+    @include borderRadius(5px,5px,5px,5px);
+    @include boxShadow();
+    @include cursor(pointer);
+
+    &:hover {
+        border: 1px solid $themeGreen;
+    }
+
+
+
+    @media (max-width: 560px) {
+        width: 40%;
+        @include flexAlign(center,center);
+    }
+}
+
+.layout{
+    position: relative;
+    width: 100%;
+    max-width: 1220px;
+    height: auto;
+    margin: 0px auto;
+    @media #{$phone} {
+        padding: 20px;
+    }
+}
+
+//NIB FOR HIGHLIGHTING THE DETAILS
+
+.nib{
+    position: relative;
+    width: 20%;
+    height: 25px;
+    background: #ffffff;
+    @include flex(row);
+    @include flexAlign(center,center);
+    @include cursor(pointer);
+    @include borderRadius(25px,25px,25px,25px);
+}
+
+.circle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: $themeGreen;
+    color: #ffffff;
+    margin: 0 10px 0 0;
+    @include borderRadius(25px,25px,25px,25px);
+    @include flex(row);
+    @include flexAlign(center,center);
+    @include cursor(pointer);
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: seagreen;
+}
+
 // STYLE THAT GOES HERE - HOMEPAGE
 
 .App{
@@ -46,7 +169,6 @@ select {
 
 .InputBox_Container{
     position: relative;
-    max-width: 40%;
     width: 100%;
     height: 50px;
     background-color: $whiteColor;
@@ -114,7 +236,6 @@ select {
                 }
 
             }
-        
            
         }
 
@@ -157,8 +278,9 @@ select {
 
 .CardContainer{
     position: relative;
-    width: 40%;
+    width: 100%;
     height: auto;
+    margin: 0 0 20px 0;
     @include flex(row);
     @include flexAlign(center,space-between);
     flex-wrap: wrap;
@@ -200,8 +322,6 @@ select {
 }
 
 
-
-
 ///// STYLE THAT GOES HERE - HEADER
 
 .Header{
@@ -229,6 +349,7 @@ select {
             @include borderRadius(100%,100%,100%,100%);
             @include flex(row);
             @include flexAlign(center,center);
+            @include boxShadow();
 
             i{
                 font-size: 20px;
@@ -284,4 +405,16 @@ select {
 
     }
 
+}
+
+
+//// 2 - SERVICES PAGE -- FOR SHOWCASING THE SERVICES
+
+.servicesCard{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    @include flex(row);
+    @include flexAlign(center,flex-start);
 }
