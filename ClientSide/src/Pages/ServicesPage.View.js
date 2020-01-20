@@ -10,7 +10,7 @@ export default function ServicesPageView() {
                 <div className="row m-b-20">
                     <div className="circle"><p>1</p></div><div><p>Racket Sports</p></div>
                 </div>
-                <div className="servicesCard">
+                <div className="servicesCard m-b-20">
                     <div className="card">
                         <p>Service</p>
                     </div>
@@ -21,7 +21,7 @@ export default function ServicesPageView() {
                 <div className="row m-b-20">
                     <div className="circle"><p>1</p></div><div><p>Racket Sports</p></div>
                 </div>
-                <div className="servicesCard">
+                <div className="servicesCard m-b-20">
                     <div className="card">
                         <p>Service</p>
                     </div>
@@ -32,7 +32,7 @@ export default function ServicesPageView() {
                 <div className="row m-b-20">
                     <div className="circle"><p>1</p></div><div><p>Racket Sports</p></div>
                 </div>
-                <div className="servicesCard">
+                <div className="servicesCard m-b-20">
                     <div className="card">
                         <p>Service</p>
                     </div>
@@ -49,7 +49,7 @@ export default function ServicesPageView() {
                 <div className="row m-b-20">
                     <div className="circle"><p>1</p></div><div><p>Racket Sports</p></div>
                 </div>
-                <div className="servicesCard">
+                <div className="servicesCard m-b-20">
                     <div className="card">
                         <p>Service</p>
                     </div>
