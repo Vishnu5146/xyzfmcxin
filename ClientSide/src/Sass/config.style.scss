@@ -5,7 +5,7 @@
 //MEDIA QUERIES
 $tablet: "(min-width: 768px) and (max-width: 1023px)";
 $desktop: "(min-width: 1024px)";
-$phone: "(min-width: 360px) and (max-width: 768px)";
+$phone: "(min-width: 320px) and (max-width: 768px)";
 
 html, body{
     padding: 0px;
@@ -86,6 +86,9 @@ select {
     height: auto;
     @include flex(column);
     @include flexAlign(center,center);
+    @media #{$phone} {
+        width: 90%;
+    }
 }
 
 .container{
@@ -122,12 +125,12 @@ select {
 
 .layout{
     position: relative;
-    width: 100%;
+    width: auto;
     max-width: 1220px;
     height: auto;
     margin: 0px auto;
     @media #{$phone} {
-        padding: 20px;
+        margin: 20px 0 20px 20px;
     }
 }
 
@@ -142,6 +145,9 @@ select {
     @include flexAlign(center,center);
     @include cursor(pointer);
     @include borderRadius(25px,25px,25px,25px);
+    @media #{$phone} {
+        width: 30%;
+    }
 }
 
 .circle{
@@ -193,6 +199,9 @@ select {
         border-right: 1px solid $placeholderColor;
         @include flex(row);
         @include flexAlign(center,center);
+        @media #{$phone} {
+            width: 40%;
+        }
         // .SelectBox{
         //     position: relative;
         //     width: 70%;
@@ -261,6 +270,9 @@ select {
         padding-left: 20px;
         font-size: 14px;
         @include placeholder(15px,$placeholderColor,0px);
+        @media #{$phone} {
+            width: 40%;
+        }
     }
 
     .SearchButton{
@@ -294,6 +306,9 @@ select {
         position: relative;
         width: 22%;
         height: 100%;
+        @media #{$phone} {
+            width: 48%;
+        }
 
         .Card{
             position: relative;
@@ -355,6 +370,9 @@ select {
             @include flex(row);
             @include flexAlign(center,center);
             @include boxShadow();
+            @media #{$phone} {
+                margin: 0 0 0 20px;
+            }
 
             i{
                 font-size: 20px;
